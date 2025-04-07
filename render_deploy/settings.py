@@ -19,6 +19,10 @@ DEBUG = False  # ✅ Set to False in production
 
 ALLOWED_HOSTS = ["spendly-backend-oq2l.onrender.com"]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://spendly-lime.vercel.app",
+]
+
 CORS_ALLOW_ALL_ORIGINS = True  # ✅ for testing
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
