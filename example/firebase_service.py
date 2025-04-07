@@ -35,7 +35,7 @@ def get_user_data(user_uuid):
 
 
 def create_or_update_user(user_uuid, user_data):
-    ref = db.reference(f"users/{user_uuid}")
+    ref = db.reference(f"users/{user_uuid}/profile")
     ref.update(user_data)
     return ref.get()
 
