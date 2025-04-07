@@ -19,8 +19,14 @@ DEBUG = False  # ✅ Set to False in production
 
 ALLOWED_HOSTS = ["spendly-backend-oq2l.onrender.com"]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+CORS_ALLOW_ALL_ORIGINS = True  # ✅ for testing
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "access-control-allow-origin",
+    "access-control-allow-credentials",
+    "authorization",
+    "x-requested-with",
+    "content-type",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
